@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "de.phash"
-version = "1.0-SNAPSHOT"
+version = "0.1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -14,10 +14,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-
 // https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
     implementation("org.apache.pdfbox:pdfbox:3.0.0-RC1")
-
 
 }
 
