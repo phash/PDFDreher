@@ -41,13 +41,15 @@ class Dreher {
 }
 
 fun pdfDrehen(file: File) {
+
     val doc = Loader.loadPDF(file)
     val newDoc = PDDocument()
     doc.documentCatalog.pages.reversed().forEach {
         it.rotation = 180
         newDoc.addPage(it)
     }
-    newDoc.save("${file.nameWithoutExtension}_gedreht.pdf")
+  
+    newDoc.save("${ file.absolutePath.substringBeforeLast(".") }_gedreht.pdf")
     newDoc.close()
     doc.close()
 }
